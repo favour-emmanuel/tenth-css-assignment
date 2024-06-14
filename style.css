@@ -112,17 +112,20 @@ nav {
   gap: 1rem;
 }
 
+.col-1,
+.col-2,
+.col-3 {
+  background: white;
+}
+
 .col-1 {
-  background-color: red;
   border-radius: 0.48rem;
 }
 .col-2 {
-  background-color: cyan;
   padding: 0.44rem 0.78rem;
   border-radius: 0.48rem;
 }
 .col-3 {
-  background-color: teal;
   border-radius: 0.48rem;
   padding: 0.44rem 0.78rem;
 }
