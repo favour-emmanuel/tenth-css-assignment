@@ -17,11 +17,11 @@ li {
 
 header {
   background-color: #0a0a51;
-  padding: 1rem 3rem;
+  padding: 1rem 1.4rem;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   color: #0dcd09;
 }
@@ -36,10 +36,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3.2rem;
   color: white;
   font-size: 14px;
+  display: none;
 }
+
 .navMenu li {
   cursor: pointer;
 }
@@ -106,21 +107,127 @@ nav {
 
 .grid-container {
   background-color: #eeeeee;
-  padding: 0.48rem 0.58rem;
+  padding: 0.88rem 1.3rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.col-1,
 .col-2,
 .col-3 {
   background: white;
 }
 
-.col-1 {
-  border-radius: 0.48rem;
+.top-section {
+  padding: 1rem 1.3rem;
+  height: 9rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.top-section h2 {
+  font-size: 16px;
+  color: #262626;
+}
+
+.top-section-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-section-flex button {
+  padding: 0.64rem 0.67rem;
+  background-color: #2a6aeb;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.bottom-section {
+  margin: 1rem 0;
+  padding: 1rem 1.4rem;
+  background: white;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.58rem;
+}
+
+.post-head span {
+  font-size: 13px;
+  color: #c6c8cf;
+}
+
+.profileIcon {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.profileIcon p {
+  color: #c6c8cf;
+  font-size: 14px;
+}
+
+.userIcon {
+  height: 50px;
+  width: 50px;
+  background: #0a0a51;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0dcd09;
+  font-weight: bold;
+}
+
+.post-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-body p {
+  margin: 1.2rem 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #45474b;
+}
+
+.image-body {
+  border: 1px solid #23242419;
+}
+
+.image-body span {
+  color: #1cb8f0;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 0.68rem;
+}
+
+.image-body p {
+  margin-top: 0;
+  padding-left: 0.68rem;
+  font-size: 14px;
+}
+
+.bottom-foot {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 0.74rem;
+}
+
+.bottom-foot h3 {
+  font-size: 13px;
+  color: #1cb8f0;
+}
+
 .col-2 {
   padding: 0.44rem 0.78rem;
   border-radius: 0.48rem;
@@ -136,29 +243,26 @@ nav {
     padding: 1rem 1.2rem;
   }
 
-  .navMenu {
-    display: none;
-    gap: 0;
-  }
-
   .logo {
     font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .navMenu {
-    gap: 18px;
-    font-size: 12px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  .navMenu {
-    gap: 3rem;
+  header {
+    padding: 1rem 3rem;
   }
+  .navMenu {
+    gap: 3.2rem;
+    font-size: 12px;
+    display: flex;
+  }
+
   .grid-container {
-    padding: 1rem 1.4rem;
+    padding: 1rem 3rem;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.8rem;
   }
