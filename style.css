@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 a {
   text-decoration: none;
 }
@@ -113,11 +117,6 @@ nav {
   gap: 1rem;
 }
 
-.col-2,
-.col-3 {
-  background: white;
-}
-
 .top-section {
   padding: 1rem 1.3rem;
   height: 9rem;
@@ -147,21 +146,20 @@ nav {
 }
 
 .bottom-section {
-  margin: 1rem 0;
+  margin-top: 1rem;
   padding: 1rem 1.4rem;
   background: white;
-}
-
-.post-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.58rem;
 }
 
 .post-head span {
   font-size: 13px;
   color: #c6c8cf;
+}
+
+.post-head p {
+  color: #b0b1b8;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .profileIcon {
@@ -170,9 +168,10 @@ nav {
   align-items: center;
 }
 
-.profileIcon p {
-  color: #c6c8cf;
+.profileIcon h4 {
+  color: #b0b1b8;
   font-size: 14px;
+  font-weight: 300;
 }
 
 .userIcon {
@@ -185,6 +184,13 @@ nav {
   align-items: center;
   color: #0dcd09;
   font-weight: bold;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.58rem;
 }
 
 .post-img {
@@ -224,46 +230,181 @@ nav {
 }
 
 .bottom-foot h3 {
-  font-size: 13px;
+  font-size: 12px;
   color: #1cb8f0;
+  font-weight: 500;
 }
 
-.col-2 {
-  padding: 0.44rem 0.78rem;
-  border-radius: 0.48rem;
+.grid-two-section {
+  padding: 1rem 1.4rem;
+  background: white;
 }
+
+.grid-two-section h3 {
+  font-size: 15px;
+}
+
+.grid-two-section .post-body a {
+  color: #1cb8f0;
+  font-size: 13px;
+}
+
+.grid-two-section .post-body .image-body {
+  margin: 0.44rem 0;
+}
+
+.grid-two-section .bottom-foot {
+  margin: 1rem 0;
+}
+
+.user-post-feed {
+  margin-top: 1rem;
+  padding: 1rem 1.4rem;
+  background-color: white;
+}
+
+.user-post-feed p {
+  margin: 0.86rem 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #45474b;
+}
+
+.user-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: url(./assets/userIcon.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.user-post-feed .bottom-foot {
+  margin: 0.98rem 0;
+}
+
 .col-3 {
-  border-radius: 0.48rem;
-  padding: 0.44rem 0.78rem;
+  padding: 0.44rem 0.68rem;
+  background-color: white;
+}
+
+.col-3 h1 {
+  color: #1cb8f0;
+  margin: 0.58rem 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.suggestion-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.88rem 0;
+}
+
+.suggest-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.suggest-icon .icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: url(./assets/img-3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.suggest-icon p {
+  color: #b0b1b8;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.suggest-icon button {
+  margin: 0.48rem 0;
+  background: #4080ff;
+  color: white;
+  border: none;
+  padding: 0.48rem 0.68rem;
+  border-radius: 0.98rem;
+  width: 4rem;
+}
+
+.sugestion-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #2a6aeb;
+  color: white;
+  border: none;
+  padding: 0.68rem 0;
 }
 
 /* MEDIA QUERY */
 @media only screen and (max-width: 500px) {
   header {
-    padding: 1rem 1.2rem;
+    padding: 1rem;
   }
 
   .logo {
     font-size: 20px;
   }
+
+  .grid-container {
+    padding: 0.88rem 0.98rem;
+  }
+
+  .top-section,
+  .bottom-section {
+    padding: 1rem;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 800px) {
+  .grid-container {
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .post-head {
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   header {
-    padding: 1rem 3rem;
+    padding: 1rem 1.8rem;
   }
+
   .navMenu {
     gap: 3.2rem;
     font-size: 12px;
     display: flex;
   }
 
-  .grid-container {
-    padding: 1rem 3rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.8rem;
+  .post-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.58rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .post-body {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-two-section h3 {
+    font-size: 13px;
+  }
+
+  .grid-two-section span {
+    font-size: 9px;
   }
 }
